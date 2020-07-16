@@ -253,7 +253,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim_remote_server</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.6</version>
         <interface>
             <name>IUimRemoteServiceServer</name>
             <instance>uimRemoteServer0</instance>
