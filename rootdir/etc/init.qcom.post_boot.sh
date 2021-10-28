@@ -4241,15 +4241,15 @@ case "$target" in
         echo "interactive" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
         echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_sched_load
         echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_migration_notif
-        echo 19000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay
-        echo 90 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load
-        echo 20000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate
-        echo 960000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq
+        echo "59000 460800:99000 691200:199000 902400:149000 1286400:199000" > /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay
+        echo 93 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load
+        echo 60000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate
+        echo 691200 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq
         echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy
-        echo 80 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
+        echo "83 691200:85 902400:85 1286400:85 1593600:95" > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
         echo 19000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time
-        echo 79000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis
-        echo 300000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+        echo 49000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis
+        echo 307200 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
         echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/ignore_hispeed_on_notif
         # online CPU2
         echo 1 > /sys/devices/system/cpu/cpu2/online
@@ -4257,15 +4257,15 @@ case "$target" in
         echo "interactive" > /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
         echo 1 > /sys/devices/system/cpu/cpu2/cpufreq/interactive/use_sched_load
         echo 1 > /sys/devices/system/cpu/cpu2/cpufreq/interactive/use_migration_notif
-        echo "19000 1400000:39000 1700000:39000 2100000:79000" > /sys/devices/system/cpu/cpu2/cpufreq/interactive/above_hispeed_delay
-        echo 90 > /sys/devices/system/cpu/cpu2/cpufreq/interactive/go_hispeed_load
-        echo 20000 > /sys/devices/system/cpu/cpu2/cpufreq/interactive/timer_rate
-        echo 1248000 > /sys/devices/system/cpu/cpu2/cpufreq/interactive/hispeed_freq
+        echo "29000 537600:99000 748800:99000 1056000:149000 1209600:99000 1593600:199000" > /sys/devices/system/cpu/cpu2/cpufreq/interactive/above_hispeed_delay
+        echo 91 > /sys/devices/system/cpu/cpu2/cpufreq/interactive/go_hispeed_load
+        echo 60000 > /sys/devices/system/cpu/cpu2/cpufreq/interactive/timer_rate
+        echo 1209600 > /sys/devices/system/cpu/cpu2/cpufreq/interactive/hispeed_freq
         echo 1 > /sys/devices/system/cpu/cpu2/cpufreq/interactive/io_is_busy
-        echo "85 1500000:90 1800000:95 2100000:99" > /sys/devices/system/cpu/cpu2/cpufreq/interactive/target_loads
+        echo "83 748800:85 1056000:85 1209600:87 1363200:85 1593600:87 1900800:87 2150400:91" > /sys/devices/system/cpu/cpu2/cpufreq/interactive/target_loads
         echo 19000 > /sys/devices/system/cpu/cpu2/cpufreq/interactive/min_sample_time
-        echo 39000 > /sys/devices/system/cpu/cpu2/cpufreq/interactive/max_freq_hysteresis
-        echo 300000 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
+        echo 29000 > /sys/devices/system/cpu/cpu2/cpufreq/interactive/max_freq_hysteresis
+        echo 307200 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
         echo 0 > /sys/devices/system/cpu/cpu2/cpufreq/interactive/ignore_hispeed_on_notif
         # re-enable thermal hotplug
         echo 1 > /sys/module/msm_thermal/core_control/enabled
