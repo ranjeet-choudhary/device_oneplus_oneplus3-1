@@ -5587,6 +5587,9 @@ case "$console_config" in
         echo "Enable console config to $console_config"
         ;;
 esac
+#limit voltage_max to 4170, stops charging at 90%
+echo 4170 > /sys/class/power_supply/battery/voltage_max
+echo 4170 > /sys/class/power_supply/usb/voltage_max
 
 # Parse misc partition path and set property
 misc_link=$(ls -l /dev/block/bootdevice/by-name/misc)
